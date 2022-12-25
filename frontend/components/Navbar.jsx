@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Link from 'next/link';
 export default function Navbar() {
 	return (
 
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 		<div className="container-fluid">
-			<a className="navbar-brand" href="#">Pentesting Tools</a>
+			<Link className="navbar-brand" href="#">Pentesting tools </Link>
 		</div>
 	</nav>
 	)

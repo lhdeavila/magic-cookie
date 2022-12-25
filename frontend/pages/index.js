@@ -6,10 +6,12 @@ import Navbar from '../components/Navbar'
 export default function index() {
 	return (
 
-		<div >
+		<div id="root">
 			<Navbar/>
-      {database.map(key =>
-        <Card id={key.id} title={key.title} description={key.description} url={key.url} />)}
+			<div id="pentesting-tools">
+				{database.map(key =>
+        <Card id={key.id} tool={key.tool} description={key.description} url={key.url} />)}
+				</div>
 			</div>
 
 

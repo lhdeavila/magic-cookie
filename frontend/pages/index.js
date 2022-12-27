@@ -1,19 +1,19 @@
 import React from 'react'
-import Card from '../components/Card'
-import database from '../../toolsDb'
+import Dashboard from '../components/Dashboard'
 import Navbar from '../components/Navbar'
+import Head from 'next/head';
 
 export default function index() {
 	return (
-
-		<div id="root">
-			<Navbar/>
-			<div id="pentesting-tools">
-				{database.map(key =>
-        <Card id={key.id} tool={key.tool} description={key.description} url={key.url} />)}
-				</div>
-			</div>
-
+		<>
+		<Head>
+<title> Pentesting tools</title>
+</Head>
+<div id="root">
+	<Navbar/>
+	<Dashboard/>
+	</div>
+		</>
 
 	)
 }

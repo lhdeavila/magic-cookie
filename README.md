@@ -1,9 +1,9 @@
-# magic-cookie
+# Magic-cookie
   Compile description of kali linux tools with web scraper, but... what is magic cookie? and why?
 
 ![alt image](docs/Initial_version.png)
 
-#### how to
+## How-To
 How use scraper:
 ```
 	gem install nokogiri
@@ -19,3 +19,7 @@ How use frontend:
 
 	# url: http://localhost:3000
 ```
+
+### Timeline
+##### Add particlesjs library, princetown font & become responsive from pure css module
+![alt image](docs/responsive.png)

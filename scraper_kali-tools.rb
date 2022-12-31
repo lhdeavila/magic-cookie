@@ -1,7 +1,17 @@
 #!/usr/bin/env ruby
 require "nokogiri"
 require "httparty"
+=begin
+MODEL
+"tool": {
+        "id": "integer",
+        "tool": "string",
+        "description": "string",
+        "url: string",
+        }
+=end
 
+# main method
 def scraper(url)
   unparse = HTTParty.get(url)
   parse = Nokogiri::HTML(unparse.body)
@@ -33,6 +43,7 @@ def main
   while cnt <= counter
     tool_url = get_list.css("a")[cnt]["href"]
     tool_url ? true : break
+    # if url content hashtag
     if tool_url.match(/#/)
       cnt += 1
     else
@@ -43,7 +54,7 @@ def main
         description: get_tool_page.css("p").text,
         url: tool_url,
       }
-      puts javascript_db_object(object = tool)
+      puts javascript_db_object tool
       cnt += 1
     end
   end
@@ -56,9 +67,5 @@ def javascript_db_file
 end
 
 javascript_db_file { main }
-# File.open("toolsDB.js", "w").each do |file|
-#   file.write()
-# end
-# main
 
 puts(%x{cd frontend && npm run dev})

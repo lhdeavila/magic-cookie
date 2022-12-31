@@ -1,23 +1,80 @@
+/* globals */
 
+@font-face {
+	font-family: Gansta;
+	src: url(./fonts/pricedown-bl.ttf);
+}
 :root {
 	--bg-black: #000;
 	--bs-cian: #0ff;
 	--bs-mag: #f0f;
 }
-
-body {
-	background: #0c0c0c;
-	-webkit-text-size-adjust: 100%;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+h3 {
+	font-family: Gansta;
+}
+.section__padding {
+  padding: 4rem 6rem;
+}
+.section__margin {
+  margin: 4rem 6rem;
+}
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+  .section__margin {
+    margin: 4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .section__margin {
+    margin: 4rem 2rem;
+  }
 }
 
+/* Dashboard */
 #pentesting-tools {
 	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
-	padding: 4rem 6rem;
-	margin: 4rem 6rem;
+	padding: 1rem 2rem;
+	margin: 2rem 3rem;
 }
 
+/* Card */
 .pentesting-tool__card {
 	display: flex;
 	background-color: #17141d;
@@ -25,24 +82,79 @@ body {
 	box-shadow: -1rem 0 3rem #000;
 	transition: 0.4s ease-out;
 	position: relative;
-	padding: 3px 3px 3px 3px;
+	padding: 3px;
+	margin: 20px;
 }
-
 .pentesting-tool__header {
-	color: #666;
+	color: #777;
 }
-
-
-
 .pentesting-tool__card:hover {
 transform: translateY(-30px);
 transition: 0.4s ease-out;
 }
 
 .pentesting-tool__title {
-	font-size: 40px;
+	font-size: 30px;
 	text-transform: capitalize;
 }
 .pentesting-tool__description {
 	font-size: 14px;
 }
+.acord{
+	position:relative;
+	overflow:hidden;
+ }
+ .acord .pentesting-tool__title{
+	 position:relative;
+	 z-index: 1000;
+	 display:block;
+ }
+ .acord .pentesting-tool__title {
+	 display:block;
+	 position:absolute;
+	 text-align: center;
+ }
+  .acord .pentesting-tool__header{
+	 position:absolute;
+	 z-index: 1111;
+	 top:0;
+	 left:0;
+	 width: 40px;
+	 text-align: center;
+	 -moz-transition:all .2s linear 0s;
+	 -webkit-transition:all .2s linear 0s;
+	 transition:all .2s linear 0s;
+ }
+
+  .accord .pentesting-tool__input {
+	 display:none;
+ }
+
+   .content{
+	 position:relative;
+	 overflow:hidden;
+	 -moz-transition:height 1s linear 0s;
+	 -webkit-transition: height 1s linear 0s;
+	 transition: height 1s linear 0s;
+	 height:0;
+	 font-size:14px;
+	 line-height:22px;
+	 color:#e4e4e4;
+	 text-align:center;
+	 direction:ltr;
+ }
+
+   .content .pentesting-tool__description{
+	 display: block;
+	 position: absolute;
+	 left: 10px;
+	 top: -17px;
+	 width: 20px;
+	 height: 20px;
+	 transform: rotate(45deg);
+ }
+   .pentesting-tool__input[type="checkbox"]:checked ~ div.content{
+	 height:300px;
+	 padding:10px;
+ }
+

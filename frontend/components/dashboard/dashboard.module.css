@@ -1,0 +1,64 @@
+.pentestingtools__dashboard {
+	display: flex;
+	flex-direction: column;
+}
+
+.pentestingtools__dashboard_container {
+	display: flex;
+	flex-direction: row;
+}
+
+.pentestingtools__dashboard_container_groupA {
+	flex: 0.75;
+	margin-right: 2rem;
+}
+
+.pentestingtools__dashboard_container_groupB {
+	flex: 1;
+
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+	.pentestingtools__dashboard_container {
+			flex-direction: column-reverse;
+	}
+
+
+	.pentestingtools__dashboard_container_groupA {
+			margin: 2rem 0;
+	}
+
+	.pentestingtools__dashboard_container_groupA .pentestingtools__dashboard_container_article  {
+		 width: 48%;
+	}
+
+	.pentestingtools__dashboard_container_groupA .pentestingtools__dashboard_container_article-image {
+			height: 250px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.pentestingtools__dashboard_container_groupB {
+			grid-template-columns: repeat(1, 1fr);
+	}
+
+	.pentestingtools__dashboard_container_groupA .pentestingtools__dashboard_container_article  {
+		 width: 100%;
+	}
+
+	.pentestingtools__dashboard-heading h1 {
+			font-size: 46px;
+			line-height: 52px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.pentestingtools__dashboard-heading h1 {
+			font-size: 34px;
+			line-height: 42px;
+	}
+
+}

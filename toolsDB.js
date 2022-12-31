@@ -10,7 +10,7 @@ const database = [
 
 	{
 		"id": "17",
-		"tool": " metasploit-framework",
+		"tool": " metasploit",
 		"description": "One of the best sources of information on using the Metasploit Framework is Metasploit Unleashed, a free online course created by Offensive Security. Metasploit Unleashed guides you from the absolute basics of Metasploit all the way through to advanced topics.The Metasploit Framework is an open source platform that supports vulnerability research, exploit development, and the creation of custom security tools.Installed size: 456.18 MBHow to install: sudo apt install metasploit-frameworkMetasploit Framework ConsolePayload Generator and EncoderUpdated on: 2022-Nov-24",
 		"url": "https://www.kali.org/tools/metasploit-framework/"
 	},

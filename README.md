@@ -23,3 +23,10 @@ How use frontend:
 ### Timeline
 ##### Add particlesjs library, princetown font & become responsive from pure css module
 ![alt image](docs/responsive.png)
+
+##### Hooks: pending
+
+##### Dinamic Routing & SWR: pending
+##### Microservices & API's & Docker: pending
+##### Conditional Styles & JWT
+##### Server side (static|dinamic) regeneration
